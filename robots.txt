@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mkzrt22.github.io/FluxTV-iOS/sitemap.xml

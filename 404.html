@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FluxTV</title>
+<meta name="robots" content="noindex">
+<script>
+(function () {
+  var p = location.pathname.replace(/^\/+|\/+$/g, ''), low = p.toLowerCase();
+  var ALIAS = { 'discord': 'discord', 'facebook': 'facebook', 'fb': 'facebook', 'forum': 'forum', 'forums': 'forum', 'ig': 'instagram', 'insta': 'instagram', 'instagram': 'instagram', 'partage': 'partage', 'press': 'presse', 'presse': 'presse', 'qr': 'qr', 'snap': 'snapchat', 'snapchat': 'snapchat', 'store': 'store', 'tiktok': 'tiktok', 'tt': 'tiktok', 'twitter': 'x', 'wa': 'whatsapp', 'whatsapp': 'whatsapp', 'x': 'x', 'youtube': 'youtube', 'yt': 'youtube' };
+  var target = '/FluxTV-iOS/';
+  if (low === 'apk' || low === 'fluxtv.apk') target = '/FluxTV-iOS/fluxtv.apk';
+  else if (ALIAS[low]) target = '/FluxTV-iOS/?s=' + ALIAS[low];
+  else if (low.indexOf('fluxtv-ios') === 0) target = '/FluxTV-iOS' + (p.slice(10) || '/') + location.search;
+  location.replace(target + location.hash);
+})();
+</script>
+<style>html,body{margin:0;background:#080818;color:#E2DEFF;font:16px system-ui,sans-serif}body{display:grid;place-items:center;min-height:100vh}a{color:#A5B4FC}</style>
+</head>
+<body><p><a href="/FluxTV-iOS/">Ouvrir FluxTV</a></p></body>
+</html>

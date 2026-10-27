@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soutenir FluxTV</title>
+<meta name="description" content="FluxTV est gratuit et sans pub. Si l'app te rend service, tu peux soutenir son développement avec un don libre.">
+<meta name="theme-color" content="#080818">
+<meta property="og:title" content="Soutenir FluxTV">
+<meta property="og:description" content="FluxTV est gratuit et sans pub. Un don libre aide à le faire vivre.">
+<meta property="og:image" content="https://mkzrt22.github.io/FluxTV-iOS/assets/img/apercu-lien.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/FluxTV-iOS/assets/img/favicon.png">
+<style>
+@font-face { font-family: Sora; src: url(/FluxTV-iOS/assets/fonts/Sora-Bold.ttf); font-weight: 700; font-display: swap; }
+@font-face { font-family: Manrope; src: url(/FluxTV-iOS/assets/fonts/Manrope-Regular.ttf); font-weight: 400; font-display: swap; }
+@font-face { font-family: Manrope; src: url(/FluxTV-iOS/assets/fonts/Manrope-SemiBold.ttf); font-weight: 600; font-display: swap; }
+@font-face { font-family: Manrope; src: url(/FluxTV-iOS/assets/fonts/Manrope-Bold.ttf); font-weight: 700; font-display: swap; }
+:root { --bg: #080818; --card: rgba(24, 21, 60, .78); --line: rgba(196, 181, 253, .2); --text: #F1EFFF; --dim: #B9B4E3; --faint: #8A85BA; --ok: #34D399; --warn: #FBBF24; color-scheme: dark; }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; min-height: 100vh; color: var(--text); font: 400 16px/1.6 Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+  background: radial-gradient(60% 40% at 20% 0%, rgba(99,102,241,.32), transparent 70%), radial-gradient(50% 40% at 90% 100%, rgba(162,28,175,.26), transparent 70%), var(--bg); }
+.page { max-width: 720px; margin: 0 auto; padding: 28px max(18px, env(safe-area-inset-right)) 70px max(18px, env(safe-area-inset-left)); display: grid; gap: 22px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 700 22px Sora; }
+.brand svg { width: 34px; height: 34px; }
+.eyebrow { margin: 18px 0 0; font: 700 12px Manrope; letter-spacing: .26em; text-transform: uppercase; color: #A5B4FC; }
+h1 { margin: 6px 0 0; font: 700 clamp(34px, 7vw, 50px)/1.06 Sora; letter-spacing: -.03em; text-wrap: balance; }
+h1 em { font-style: normal; background: linear-gradient(100deg, #A5B4FC, #E9A8FF 60%, #F0ABFC); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lede { margin: 12px 0 0; color: var(--dim); font-size: 18px; }
+.card { padding: 24px; border-radius: 22px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line), 0 24px 60px -30px rgba(0,0,0,.8); }
+.card h2 { margin: 0; font: 700 22px Sora; letter-spacing: -.02em; }
+.dim { margin: 6px 0 0; color: var(--dim); }
+.amts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.amt { min-width: 64px; padding: 10px 16px; border: 0; border-radius: 999px; cursor: pointer; font: 700 16px Manrope; color: var(--text); background: rgba(255,255,255,.07); box-shadow: inset 0 0 0 1px var(--line); }
+.amt.on { background: rgba(129,140,248,.25); box-shadow: inset 0 0 0 2px #A5B4FC; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 999px; font: 700 16px Manrope; color: #fff; text-decoration: none;
+  background: linear-gradient(120deg, #6366F1, #A21CAF); box-shadow: 0 10px 30px -10px rgba(99,102,241,.8); }
+.btn.ghost { background: rgba(255,255,255,.07); box-shadow: inset 0 0 0 1px rgba(200,190,255,.45); }
+.btn:focus-visible, .amt:focus-visible, .copy:focus-visible, a:focus-visible { outline: 2px solid #F0ABFC; outline-offset: 3px; }
+.fine { margin: 14px 0 0; color: var(--faint); font-size: 14px; }
+.coins { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 14px; }
+.coin { display: flex; gap: 18px; align-items: flex-start; padding: 16px; border-radius: 16px; background: rgba(8,8,24,.55); box-shadow: inset 0 0 0 1px var(--line); }
+.coin img { flex: none; width: 148px; height: 148px; border-radius: 12px; background: #fff; padding: 6px; image-rendering: pixelated; }
+.coin-txt { min-width: 0; flex: 1; }
+.coin-name { margin: 0; font: 700 18px Sora; }
+.coin-name span { margin-left: 6px; font: 700 13px Manrope; color: #A5B4FC; letter-spacing: .08em; }
+.net { margin: 2px 0 8px; color: var(--dim); font-size: 14px; }
+.net b { color: var(--text); }
+code { display: block; padding: 10px 12px; border-radius: 10px; background: #0b0a1e; box-shadow: inset 0 0 0 1px var(--line); font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; user-select: all; }
+.copy { margin-top: 10px; padding: 9px 16px; border: 0; border-radius: 999px; cursor: pointer; font: 700 14px Manrope; color: var(--text); background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px var(--line); }
+.copy.done { color: var(--ok); box-shadow: inset 0 0 0 1px var(--ok); }
+.warn { margin: 10px 0 0; font-size: 13px; color: var(--warn); }
+.thanks { color: var(--dim); }
+.thanks b { color: var(--text); }
+.foot { color: var(--faint); font-size: 13px; }
+.foot a { color: #C4B5FD; }
+@media (max-width: 520px) { .coin { flex-direction: column; } .coin img { width: 168px; height: 168px; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#A21CAF"/></linearGradient>
+  <symbol id="emblem" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="url(#lg)"/>
+    <path d="M11,15.2C11,13.6 12.7,12.7 14,13.5L26.6,22.2C27.7,23 27.7,24.9 26.6,25.7L14,34.5C12.7,35.3 11,34.4 11,32.8Z" fill="#fff"/>
+    <path d="M30.5,18.6A7.6,7.6 0 0 1 30.5,29.4" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2.7" stroke-linecap="round"/>
+    <path d="M34.8,14.6A13,13 0 0 1 34.8,33.4" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.7" stroke-linecap="round"/></symbol></defs></svg>
+<main class="page">
+  <header>
+    <a class="brand" href="/FluxTV-iOS/"><svg viewBox="0 0 48 48"><use href="#emblem"/></svg>FluxTV</a>
+    <p class="eyebrow">Soutenir</p>
+    <h1>Merci de <em>soutenir FluxTV</em></h1>
+    <p class="lede">FluxTV est gratuit, sans pub et sans compte, fait par un développeur indépendant sur son temps libre. Un don, même petit, aide à payer les comptes développeur des stores et les prochaines nouveautés.</p>
+  </header>
+
+  <section class="card">
+    <h2>Carte bancaire ou PayPal</h2>
+    <p class="dim">Montant libre, par carte bancaire ou PayPal.</p>
+    <div class="row"><a class="btn " href="https://ko-fi.com/fluxtv" target="_blank" rel="noopener" data-don="kofi">Faire un don sur Ko-fi</a></div>
+    <p class="fine">Le paiement se fait sur Ko-fi, par carte bancaire ou PayPal, jamais sur cette page.</p>
+  </section>
+  <p class="thanks"><b>Le don est libre et ne débloque rien :</b> FluxTV reste entièrement gratuit pour tout le monde. Pas de budget ? <a href="/FluxTV-iOS/#telecharger" style="color:#C4B5FD">Partage FluxTV</a>, ça aide tout autant.</p>
+  <p class="foot">Cette page ne collecte aucune donnée personnelle ; seuls les clics sur les boutons sont comptés, de façon anonyme. <a href="/FluxTV-iOS/confidentialite/">Confidentialité</a> · <a href="/FluxTV-iOS/">Retour au site</a></p>
+</main>
+<script>
+(function () {
+  var API = 'https://abacus.jasoncameron.dev/hit/fluxtv-mkzrt22/';
+  // Clics comptés une fois par navigateur et par moyen de paiement, sans cookie ni identifiant
+  function hit(k) {
+    try { if (localStorage.getItem('fluxtv-don-' + k)) return; localStorage.setItem('fluxtv-don-' + k, '1'); } catch (e) {}
+    if (!navigator.webdriver) fetch(API + 'don-' + k, { keepalive: true }).catch(function () {});
+  }
+  var paypal = document.getElementById('paypal'), base = paypal ? paypal.getAttribute('href') : '';
+  document.querySelectorAll('.amt').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.amt').forEach(function (x) { x.classList.toggle('on', x === b); });
+      if (paypal) paypal.href = b.dataset.v ? base + '/' + b.dataset.v + 'EUR' : base;
+    });
+  });
+  document.querySelectorAll('[data-don]').forEach(function (a) { a.addEventListener('click', function () { hit(a.dataset.don); }); });
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.dataset.copy), txt = el.textContent, label = b.textContent;
+      function ok() { b.textContent = 'Adresse copiée ✓'; b.classList.add('done'); setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1800); }
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function () { select(el); }); else select(el);
+    });
+  });
+  function select(el) { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+})();
+</script>
+</body>
+</html>

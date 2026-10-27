@@ -1,5 +1,12 @@
 {
  "page": "https://mkzrt22.github.io/soutenir",
+ "liens": [
+  {
+   "titre": "Carte ou PayPal",
+   "sous_titre": "ko-fi.com/fluxtv",
+   "url": "https://ko-fi.com/fluxtv"
+  }
+ ],
  "crypto": [
   {
    "nom": "Ethereum",

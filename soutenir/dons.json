@@ -1,0 +1,17 @@
+{
+ "page": "https://mkzrt22.github.io/soutenir",
+ "crypto": [
+  {
+   "nom": "Ethereum",
+   "symbole": "ETH",
+   "reseau": "Ethereum ou Robinhood Chain",
+   "adresse": "0x824434e167b1f1d01d18d93bb2959f4a224832b1"
+  },
+  {
+   "nom": "Solana",
+   "symbole": "SOL",
+   "reseau": "Solana",
+   "adresse": "33JGT6Kj1Y7cdWsfj2FG3DttEBXWURoJuaEyLK6URYnp"
+  }
+ ]
+}
